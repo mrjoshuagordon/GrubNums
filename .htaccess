@@ -1,0 +1,12 @@
+<IfModule mod_suphp.c>
+suPHP_ConfigPath /home/username
+<Files php.ini>
+order allow,deny
+deny from all
+</Files>
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /profile.php?username=$1

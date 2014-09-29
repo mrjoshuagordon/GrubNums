@@ -1,0 +1,833 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import "form_styles.css"; 
+@import "custom.css";
+@import "foundation.css";
+@import "foundation.min.css";
+@import "normalize.css";
+@import "checkbox.css";
+@import "tables.css";
+
+
+header {
+
+	padding: 5px 15px;
+	margin: 0 auto;
+	text-align:left;
+	max-height:120px;
+}
+
+
+#container {
+	margin: 0 auto;
+	width: 98%;
+
+
+}
+
+#body {
+	background: #FFF8FF;
+	margin: 0 auto;
+ 	padding: 1.04em;
+
+	border: 1px solid #A89F96;
+	float:left;
+	width:100%;
+	min-height:800px;
+	font-size: 0.8em;
+}
+
+
+div#side-panel{
+	margin-left: 59%;
+	margin-right:25%;
+	background: #FFF8FF;
+	height:500px;
+
+	padding-bottom: 20px;
+
+     position: fixed;
+
+}
+
+
+
+
+aside.sidebar {
+    float:right;
+    width: 100%;
+	padding-left:20px;
+	background: #FFF8FF;
+	border: 1px solid #A89F96;
+	min-width:280px;
+}
+
+
+div#profile-aside{
+float:left;
+width:100px;
+
+}
+
+div#loggedin-sidebar{
+	margin-left: 45%;
+	padding-top:20%;
+}
+
+
+input, textarea{
+
+padding-left:5px;
+font:1em "Open Sans", sans-serif;
+	color:#363639;
+}
+
+
+/** element defaults **/
+
+table {
+	width: 60%;
+	text-align: center;
+	border-collapse: collapse;
+	  table-layout: fixed;
+}
+
+
+
+
+th, td {
+	color: #666;
+	padding: 10px 10px;
+	text-align: center;
+	border-collapse: collapse;
+	background: #ccc none repeat-x scroll left top;
+}
+
+
+
+tr:nth-child(2n+0) td{
+	background-color: #F4F4FF ;
+
+}
+
+td {
+
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+
+}
+
+p {
+
+	line-height: 1.9em;
+	margin-bottom: 20px;
+
+}
+
+
+a, .sidebar li ul li a.readmore {
+
+	color: #064FB1;   /* light blue */
+	
+
+}
+
+
+ul#loggedin-ul li{
+	padding:0px;
+   display: block;
+
+}
+
+
+
+a:hover {
+
+	color: #FF544A; /* pink */ 
+
+}
+
+
+a:focus {
+
+	outline: none;
+
+}
+
+
+a.button:hover {
+	background-color: #FF8533;
+}
+
+
+
+h1 {
+	color: #134F73; /*darker blue*/
+	font-size: 2.7em;
+
+}
+
+
+
+h2 {
+
+	color: #134F73; /*darker blue*/
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	font-weight: bold;
+	padding: 0 0 5px;
+	margin: 0;
+
+}
+
+h2.h2-alert, li.li-alert{
+color: #FF2800;
+
+}
+
+
+
+h3 {
+
+	color: #134F73; /*darker blue*/
+	font-size: 1em;
+	font-weight: normal;
+	margin-bottom: 10px;
+	letter-spacing: -1px;
+
+}
+
+
+
+h4 {
+    color: #134F73; /*darker blue*/
+    font-size: 1.2em;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    
+
+}
+
+
+
+h5 {
+    color: #FF544A; /*Pink*/
+    font-size: 1em;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    
+
+}
+
+
+
+ul, ol {
+	margin: 0 0 15px 15px;
+
+}
+
+
+li {
+	list-style-type: none;
+	padding-bottom: 5px;
+
+}
+
+
+
+textarea {
+	width: 90%;
+	height: 100px;
+
+}
+
+
+li ol, li ul {
+	
+	list-style-type: none;
+	
+	font-size: 1.0em;
+
+	margin-bottom: 0;
+
+	padding-top: 5px;
+
+}
+
+
+
+
+
+
+
+/*grub nums header*/
+
+header h1 a, header h1 a:hover {
+    color: ##FF544A;
+    font-size: 1.4em;
+    padding: 10px 0;
+    font-weight: bold;
+    letter-spacing: -5px;
+    line-height:45px;
+    text-transform: lowercase;
+    text-decoration: none;
+
+}
+
+
+header h1 a span, header h1 a:hover span {
+	color: #134F73;
+}
+
+
+nav {
+	height: 4em;
+	width: 100%;
+
+}
+
+nav .inner-nav { 
+	background-color: #0C1C29;
+	border: 0px solid #0C1C29;
+	height: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+
+
+nav ul {
+
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 120%;
+	background-color: #14273A;
+	border: 0px solid #14273A;
+	border-radius: 15px;
+
+}
+
+
+
+nav ul li {
+
+	float: left;
+	display: block;
+	padding: 0;
+
+}
+
+
+
+
+nav ul li a {
+	color: #fff;
+	display: block;
+	font-size: 1em;
+	letter-spacing: 0.2px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 1.04em 1.2em;
+
+}
+
+
+
+
+nav ul li a:hover {
+
+	color: #FF544A; /* pink */ ;
+
+}
+
+
+
+
+/*Left align table for setting table, this is how you target specific areas within styling*/
+/* MICOR LEVEL CSS Styling*/
+
+
+a img {
+ border-radius: 10px;
+ border: 2px solid #A89F96;
+}
+
+
+
+
+
+
+.profile {
+	background: $f9f9f9;
+	border: 1px dashed #ccc;
+	padding: 5px;
+	margin-right:15px;
+	width:60%;
+	margin-bottom:10px;
+	
+	
+}
+
+
+.profile img {
+	width:25%;
+}
+
+
+.profile_page img {
+	width:30%;
+}
+
+
+.profile img {
+	width:50%;
+}
+ 
+
+
+
+.clear {
+
+	clear: both;
+
+}
+
+
+
+footer {
+
+	background: #222;
+	border-top: 2px solid #eee;
+
+}
+
+
+
+footer p {
+
+	text-align: left;
+
+	color: #ccc;
+
+	font-size: 0.9em;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+
+
+footer p a {
+
+	color: #ccc;
+
+	font-weight: bold;
+
+}
+
+
+
+.footer-content {
+	padding: 1.04em;
+
+}
+
+
+
+footer .footer-content ul {
+
+	width: 33%;
+
+	list-style: none;
+	margin: 0;
+
+	padding: 0;
+
+	float: left;
+
+}
+
+
+
+
+footer .footer-content li {
+
+	padding: 5px 5px;
+
+}
+
+
+
+footer .footer-content li a, footer .footer-content h4 {
+
+}
+
+
+
+footer .footer-content li a {
+
+ color: #505050;
+    font-size: 0.9em;
+    text-decoration: underline;
+
+}
+
+
+footer .footer-content li a:hover { 
+	color: #909090;
+}
+
+
+
+footer .footer-content h4 {
+
+   color: #ddd;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-bottom: 0;
+
+}
+
+
+
+footer .footer-content ul.endfooter {
+
+	margin-right: 0;
+
+}
+
+footer .footer-bottom {
+
+	padding: 10px;
+
+	text-align: center;
+
+	background-color: #000;
+
+}
+
+.recommend{
+	border: 1px dashed #ccc;
+}
+
+footer .footer-bottom p {
+
+	text-align: center;
+
+}
+
+
+
+footer .footer-bottom p, footer .footer-bottom p a {
+
+	color: #666;
+
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display:table;
+
+}
+
+.cf:after {
+	clear:both;
+
+} 
+
+#container_gallery{
+	width:60%;
+	padding:10px;
+	background:#f0f0f0;
+	margin:0 auto;
+	float: left;
+	
+}
+
+.gallery {
+	width:100%;
+}
+
+.gallery-item{
+	float:left;
+	background:rgba(66, 189, 204, 0.5); 
+	width:150px;
+	margin:1%;
+ 	padding-top: 0%;
+    padding-right: 1%;
+    padding-bottom:  1%;
+    padding-left:  1%;
+
+	box-shadow:1px 1px 1px;
+	
+}
+
+
+div.profile-gallery-name {
+text-align: center;
+	font-weight: bold;
+}
+
+
+
+
+.gallery-item img, .gallery-item-public img, .gallery-item-not-public img{
+	width:100%;
+	display: block;
+	margin: 0 auto;
+
+}
+
+
+
+.gallery-item-public{
+	float:left;
+	background:rgba(181, 5, 14, 0.5); 
+	width:150px;
+	margin:1%;
+	padding:2%;
+
+	box-shadow:1px 1px 1px;
+
+
+	
+}
+
+
+
+.gallery-item-not-public{
+	float:left;
+	background:rgba(19, 117, 28, 0.5);
+	width:150px;
+	margin:1%;
+	padding:2%;
+
+	box-shadow:1px 1px 1px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Drag and drop Upload*/
+.dropzone{
+	width:300px;
+	height:300px;
+	border:2px dashed #ccc;
+	color: #ccc;
+	line-height:300px;
+	text-align: center;
+
+}
+
+.dropzone.dragover{
+	border-color:#000;
+	color:#000;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img.settings-profile-img{
+	max-width:300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: 2px solid #A89F96;
+
+}
+
+
+
+
+
+
+
+input#report-input{
+width: 2em;
+margin: 0;
+padding: 0;
+font-size: 1em;
+opacity: .5;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Reverse of small screen size settings*/
+
+
+
+
+/*Do not show the mobile profile add in large screen format*/
+#mobile-login, ul#settings-ul{
+	display:none;
+}
+
+
+
+
+
+
+@media screen and (min-width: 1100px ){
+
+div#side-panel{
+	margin-left: 69%;
+	margin-right:25%;
+	background: #FFF8FF;
+	height:500px;
+
+	padding-bottom: 20px;
+
+     position: fixed;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*Small Screen Size*/
+
+@media screen and (max-width: 730px ), screen and (max-height: 600px) {
+
+	div#container { width: auto; }
+
+	#body { font-size: 0.8em;
+	width:100%;
+	 }
+
+	header, header h1 a, header h1 a:hover { text-align: center; padding: 10px 0 0 0; font-size: .9em; }
+	
+	nav ul li { float: none; text-align:center;  }
+
+	nav ul li a { margin-top: 0; padding: 0.5em; }
+
+	nav { height: 120%; position: relative; }
+	
+	#rec { display: none; } 
+
+	#login {
+	 display: none }
+	 
+	.wrap {
+    width: 100%;
+	}
+	
+	#mobile_settings, ul#settings-ul{
+	display:block;
+	
+	}
+	
+	#mobile-login{
+	display:block;
+	
+	}
+	div.profile{
+		border: 1px dashed #ccc;
+		width:50%;
+	}
+	
+	div#side-panel{
+	display:none;
+	}
+	
+	#container_gallery{
+	width:100%;
+	padding:10px;
+	background:#f0f0f0;
+	margin:0 auto;
+	float: left;
+	
+	}
+	
+	#comment_table_settings {
+		
+		background-color: #F4F4FF;
+		border: solid 1px #000;
+		border-collapse: collapse;
+		width: 100%;
+}
+
+
+	div.table_container, div.comment_output_table, 
+	table#dataTable.form, div.comment_container, 
+	div.comment_container-grubinfo, table#image_detail_table_settings-grubinfo, 
+	div#recipe-div, div.comment_table-grubinfo, textarea#direction-textarea {
+		width:100%;
+	
+	}
+	
+
+	
+	
+	
+	td.image-detail-title{
+		font-weight: bold;
+	
+		padding-left:30px;
+		min-width: 300px;
+		
+}
+
+td.image-detail-data{
+
+		text-align: left;
+		padding-left:30px;
+		min-width: 300px;
+		
+}
+
+input#BX_Ingredient, input#BX_amount{
+	width:75%;
+
+}
+
+
+
+} /** End Media Screen/
