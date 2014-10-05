@@ -147,23 +147,28 @@ function mail_users($subject, $body){
 function mail_grubnums($subject, $body, $user_id, $first_name, $email){
 
  	$user_info = $user_id." - " . $first_name . " - " . $email ;
- 
-	
+ 		
+	email('Joshua <josh@jganalytics.com>', $subject . " for GrubNums.com",  "Dear Joshua,\nThis is a message from ".$user_id ."\n\n". $body . "\nCheers,
+GrubNums
+www.grubnums.com
 
-	
-	email('josh@jganalytics.com', $subject . " --- " . $user_info,  "This is a message from ".$email."\n\n". $body ); 
+PS: To Unsubscribe from our emails, kindly respond to this email with an empty message body and we will never contact you again." ); 
 
 }
 
 
 function email($to, $subject, $body) {
- 	$headers = "From:  joshuag@grubnums.com\r\n";
-	$headers .= "Reply-To:  joshuag@grubnums.com\r\n";
-	$headers .= "Return-Path:  joshuag@grubnums.com\r\n";
-	$headers .= "CC:  joshuag@grubnums.com\r\n";
-	$headers .= "BCC:  joshuag@grubnums.com\r\n";
+
+$messageid = time() .'-' . md5($subject . $to) . '@grubnums.com'; 
+
+
+ 	$headers = "From: Joshua <joshuag@grubnums.com>\r\n";
+	$headers .= "Reply-To:  Joshua <joshuag@grubnums.com> \r\n";
+	
+	$headers .= "Signed-By:  grubnums.com\r\n";
 	$headers .= "Content-Type: text/plain\r\n"; 
-	mail($to, $subject, $body, $headers);
+	$headers .= "Message-Id:".$messageid."\r\n";
+	mail($to, $subject, $body, $headers, '-fjoshuag@grubnums.com');
 
 }
 
@@ -258,7 +263,11 @@ function register_user($register_data) {
 
 	mysql_query("INSERT INTO `users` ($fields) VALUES ($data)");
 	
-	email($register_data['email'], 'Activate your account', "Hello " . $register_data['first_name'] . ",\n\nYou need to active your account so use the link below: \n\n	http://localhost:1234/grubpix/activate.php?email=".$register_data['email']."&email_code=".$register_data['email_code']." \n\n- josh");
+	email($register_data['email'], 'GrubNums: Activate your account', "Hello " . $register_data['first_name'] . ",\n\nYou need to active your account with GrubNums so use the link below: \n\n	http://grubnums.com/activate.php?email=".$register_data['email']."&email_code=".$register_data['email_code']." \n\nCheers,
+GrubNums
+www.grubnums.com
+
+PS: To Unsubscribe from our emails, kindly respond to this email with an empty message body and we will never contact you again." );
 	}
 //5f4dcc3b5aa765d61d8327deb882cf99
 
