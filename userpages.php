@@ -22,6 +22,7 @@ if(isset($_POST['users-id'])) {
 	$limit = (int) $_POST['users-id'];
 	unset($limits[array_search($limit,$limits)]); 
 	array_unshift($limits, $limit);
+	header('Location: userpages.php');
 
 	} else{
 	
@@ -71,7 +72,7 @@ Users Shown:  <select name = 'users-id' onchange="change()" width="80" style="wi
 	
 </select>
 
-<?php echo count($user_profiles);?>
+<?php echo $limit;?>
 
 </form> 
 
