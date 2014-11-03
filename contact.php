@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include 'core/init.php';
 protect_page();
 include 'includes/overall/overallheader.php' ;
@@ -36,7 +37,7 @@ if(isset($_GET['success']) && empty($_GET['success'])){
 			}	else{
 				mail_grubnums($_POST['subject'], $_POST['body'], $user_data['user_id'], $user_data['first_name'], $user_data['email']);
 				header('Location: contact.php?success');
-				exit();	
+				 ob_flush();
 			}
 		
 	

@@ -1,4 +1,5 @@
 <?php 
+ob_start(); 
 include 'core/init.php';
 logged_in_redirect();
 include 'includes/overall/overallheader.php'; 
@@ -68,7 +69,7 @@ if(isset($_GET['success']) && empty($_GET['success'])){
 			);
 		register_user($register_data);
 		header('Location: register.php?success ');
-		exit();
+		ob_flush();	
 	
 	
 		} else if (empty($errors) === false ) {

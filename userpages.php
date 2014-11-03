@@ -6,13 +6,15 @@ require 'ProfileGallery.php';
 $gallery = new ProfileGallery();
 $gallery->setPath('./images/profile/'); 
 $limits = [10,25,50,100,500,1000]; 
-
+$limit = get_show_input($session_user_id);
+if(empty($limit)) {	user_show_input($session_user_id,50 );} 
 ?>
 
 
 <script>
 function change(){
     document.getElementById("num-users-form").submit();
+
   }
 </script>
 
@@ -20,13 +22,20 @@ function change(){
 <?php
 if(isset($_POST['users-id'])) {
 	$limit = (int) $_POST['users-id'];
+	user_show_input($session_user_id,$limit );
+	$limit = get_show_input($session_user_id);
+
 	unset($limits[array_search($limit,$limits)]); 
 	array_unshift($limits, $limit);
-	header('Location: userpages.php');
 
-	} else{
+		
 	
-	$limit = 10;	
+	} else {
+	user_show_input($session_user_id,50 );
+	$limit = get_show_input($session_user_id);
+	
+	
+	
 	
 } 
 
@@ -66,7 +75,8 @@ Users Shown:  <select name = 'users-id' onchange="change()" width="80" style="wi
 		<?php
 		for($i=0; $i<count($limits); $i++){
 			echo '<option>'.$limits[$i].'</option>' ;
-			}			
+			}	
+					
 		?>
 
 	
@@ -76,7 +86,7 @@ Users Shown:  <select name = 'users-id' onchange="change()" width="80" style="wi
 
 </form> 
 
-<div class="container_gallery">
+<div id="users_container_gallery">
 			<?php if($images): ?>
 			<div class="gallery cf">
 

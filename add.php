@@ -10,7 +10,8 @@ include 'includes/overall/overallheader.php' ;
 
 
 
-<p> File Upload (jpg, jpeg, gif, or png). Max Size 10 files and 2MB each. <br> After uploading your files, add details and publish them by clicking!  </p>
+<p id="upload-message"> File Upload (jpg, jpeg, gif, or png). Max Size 10 files and 2MB each. 
+ After uploading your files, add details and publish them by clicking!  </p>
 
 <?php
 		

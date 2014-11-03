@@ -61,7 +61,7 @@ echo '<h2> Welcome to GrubNums, '. $user_data['username'].'</h2>';
 		Recent Grubs:
 	<div class="home_recent_grubs">
     <table class="head">
-        <tr>
+        <tr class="index-recent">
             <td>Grub</td>
             <td>Title</td>
             <td>Description</td>
@@ -75,7 +75,7 @@ echo '<h2> Welcome to GrubNums, '. $user_data['username'].'</h2>';
 		$grub_id = image_id_from_imagename($image); 
 		$temp = image_data( $grub_id );	
 		
-		echo '<tr href="grubinfo.php?image='.$image.'"> <td> <a href="grubinfo.php?image='.$image.'"><img id="grub-rec-widget" src="uploads/thumbs/'.$image.'"></img></a></td> <td> '. $temp['title'].'</td> <td>'. substr($temp['description'],0,30).'...'.'</td> </tr>';
+		echo '<tr class="index-recent" href="grubinfo.php?image='.$image.'"> <td> <a href="grubinfo.php?image='.$image.'"><img id="grub-rec-widget" src="uploads/thumbs/'.$image.'"></img></a></td> <td> '. $temp['title'].'</td> <td>'. substr($temp['description'],0,30).'...'.'</td> </tr>';
 		}
 					?>
     </table>
@@ -91,7 +91,7 @@ echo '<h2> Welcome to GrubNums, '. $user_data['username'].'</h2>';
 	Recent Comments:
 	<div class="home_recent_comment">
     <table class="head">
-        <tr>
+        <tr class="index-recent" >
             <td>Grub</td>
             <td>User</td>
             <td>Comment</td>
@@ -110,7 +110,7 @@ echo '<h2> Welcome to GrubNums, '. $user_data['username'].'</h2>';
 		
 		
 		
-		echo '<tr href="grubinfo.php?image='.$image.'"> <td> <a href="grubinfo.php?image='.$image.'"><img id="grub-rec-widget" src="uploads/thumbs/'.$image.'"></img></a></td> <td> <a href="./'.$comments[$i]['username'].'"><img id="grub-rec-widget"  src="'.$profile.'">'. ' '.   $comment['username'].'</a></td> <td>'. substr($comment['comment'],0,20).'...'.'</td> </tr>';
+		echo '<tr class="index-recent" href="grubinfo.php?image='.$image.'"> <td> <a href="grubinfo.php?image='.$image.'"><img id="grub-rec-widget" src="uploads/thumbs/'.$image.'"></img></a></td> <td> <a href="./'.$comments[$i]['username'].'"><img id="grub-rec-widget"  src="'.$profile.'">'. ' '.   $comment['username'].'</a></td> <td>'. substr($comment['comment'],0,20).'...'.'</td> </tr>';
 		}
 					?>
     </table>

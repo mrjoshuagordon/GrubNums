@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include 'core/init.php';
 protect_page();
 include 'includes/overall/overallheader.php' ;
@@ -113,6 +114,7 @@ if(isset($_POST['location-id'])) {
 	$result = get_setting_limit($session_user_id);
 	$location = $result['location'];
 	header('Location: grubgallery.php');
+	 ob_flush();
 
 	
 	

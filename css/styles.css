@@ -684,7 +684,10 @@ opacity: .5;
 
 
 
+p#upload-message{
+	width: 50%;
 
+}
 
 
 
@@ -700,6 +703,19 @@ opacity: .5;
 #mobile-login, ul#settings-ul{
 	display:none;
 }
+
+
+
+
+
+div#users_container_gallery{
+
+width:55%;
+
+}
+
+
+
 
 
 
@@ -752,7 +768,7 @@ div#side-panel{
 	
 	#rec { display: none; } 
 
-	#login {
+	#login, div#dropzone.dropzone {
 	 display: none }
 	 
 	.wrap {
@@ -792,7 +808,18 @@ div#side-panel{
 		border: solid 1px #000;
 		border-collapse: collapse;
 		width: 100%;
-}
+	}	
+
+/** Choose file backdrop fo add.php**/ 
+
+	#add-form {
+			margin-top:10px;
+			background-color: #F4F4FF;
+			border: solid 1px #000;
+			border-collapse: collapse;
+			width: 35%;
+			min-width:200px;
+	}
 
 
 	div.table_container, div.comment_output_table, 
@@ -805,6 +832,11 @@ div#side-panel{
 	
 
 	
+	div.home_recent_grubs, div.inner_home_recent_grubs, table.head, tr.index-recent, table{
+	
+		width:100%;
+	}
+	
 	
 	
 	td.image-detail-title{
@@ -815,18 +847,35 @@ div#side-panel{
 		
 }
 
-td.image-detail-data{
+	td.image-detail-data{
 
-		text-align: left;
-		padding-left:30px;
-		min-width: 300px;
+			text-align: left;
+			padding-left:30px;
+			min-width: 300px;
 		
-}
+	}
 
-input#BX_Ingredient, input#BX_amount{
-	width:75%;
+	input#BX_Ingredient, input#BX_amount{
+		width:75%;
 
-}
+	}
+
+
+	p#upload-message{
+		width: 90%;
+
+	}
+
+
+
+
+	div#users_container_gallery{
+
+	width:80%;
+
+	}
+
+
 
 
 

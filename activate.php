@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include 'core/init.php';
 logged_in_redirect();
 include 'includes/overall/overallheader.php' ;
@@ -39,7 +40,7 @@ else if ( isset($_GET['email'], $_GET['email_code'] ) === true ) {
 	
 	} else{
 	header('Location: activate.php?success');
-	exit();
+	ob_flush();	
 	
 	
 	}
